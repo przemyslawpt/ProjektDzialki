@@ -9,6 +9,6 @@ package pl.ptaszek.opole.nauka;
 public class TypyProste {
 
 	public static void main(String argc[]) {
-		System.out.println("Hello world");
+		System.out.println("Siemson");
 	}
 }
