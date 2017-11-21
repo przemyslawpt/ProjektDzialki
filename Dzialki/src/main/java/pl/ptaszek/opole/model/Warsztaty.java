@@ -11,23 +11,13 @@ public class Warsztaty {
 	 * @param argc
 	 */
 	public static void main(String[] argc) {
-		Dzialka radkaDzialka = new Dzialka();
-		Dzialka mojaDzialka = radkaDzialka;
-		System.out.println(radkaDzialka.getNumerEwidencyjny());
-		radkaDzialka.setNumerEwidencyjny("MOG-334");
-		System.out.println(radkaDzialka.getNumerEwidencyjny());
-		System.out.println(mojaDzialka.getNumerEwidencyjny());
-		Dzialka asiDzialka = new Dzialka("OPOLE-222356");
-		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
-		radkaDzialka = asiDzialka;
-		mojaDzialka = asiDzialka;
-		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
-		System.out.println("mojaDzialka" + mojaDzialka.getNumerEwidencyjny());
-		System.out.println("radkaDzialka" +radkaDzialka.getNumerEwidencyjny());
-		asiDzialka.setNumerEwidencyjny("DUPA-popsutyNumer");
-		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
-		System.out.println("mojaDzialka" + mojaDzialka.getNumerEwidencyjny());
-		System.out.println("radkaDzialka" +radkaDzialka.getNumerEwidencyjny());
+		String ulica = "Miechowice";
+		String numerDomu = "28";
+		String kodPocztowy = "05-640";
+		String miejscowosc = "Mogielnica";
+		Adres miechowice = new Adres(ulica, numerDomu, kodPocztowy, miejscowosc);
+		
+		Osoba radek= new Osoba("Radek", "Ptaszek", miechowice, "13.01.1888", "8953121251412");
+		
 	}
-
 }

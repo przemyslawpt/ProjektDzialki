@@ -11,16 +11,22 @@ public class Dzialka {
 	 */
 	private String numerEwidencyjny;
 	/**
-	 * Rozmiar dzia³ki w metrach kwadratowych
+	 * Rozmiar dzialki w metrach kwadratowych
 	 */
 	private String wielkoscDzialki;
-	
+
+	private Osoba wlasciciel;
+
+	private Adres adres;
+		
 	public Dzialka() {
-		numerEwidencyjny = "USTAW ZANIM ZACZNIESZ UZYWAC";
 	}
 
-	public Dzialka(String nrEwidencyjny) {
-		numerEwidencyjny = nrEwidencyjny;
+	public Dzialka(String numerEwidencyjny, String wielkoscDzialki, Osoba wlasciciel) {
+		super();
+		this.numerEwidencyjny = numerEwidencyjny;
+		this.wielkoscDzialki = wielkoscDzialki;
+		this.wlasciciel = wlasciciel;
 	}
 
 	public String getNumerEwidencyjny() {
@@ -29,10 +35,19 @@ public class Dzialka {
 
 	public void setNumerEwidencyjny(String wartosc) {
 		numerEwidencyjny = wartosc;
+
 	}
 
-	public void rozmiar() {
-		wielkoscDzialki = "podaj iloœæ metrów kwadrat";	
-	
+	public String getWielkoscDzialki() {
+		return wielkoscDzialki;
 	}
+
+	public Osoba getWlasciciel() {
+		return wlasciciel;
+	}
+
+	public void setWlasciciel(Osoba wlasciciel) {
+		this.wlasciciel = wlasciciel;
+	}
+
 }
