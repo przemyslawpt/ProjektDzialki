@@ -26,6 +26,7 @@ public class Warsztaty {
 		System.out.println(sad);
 		/**
 		 * Jak uruchomic program (jakich komend uzyc?) aby kazda kolejna dana byla pod sobá a nie w jednej lini??
+		 * jak zrobic wprowadzanie danych? scanner in?
 		 */
 		
 		
