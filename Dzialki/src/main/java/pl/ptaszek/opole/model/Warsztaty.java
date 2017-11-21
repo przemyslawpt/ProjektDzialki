@@ -18,7 +18,16 @@ public class Warsztaty {
 		System.out.println(radkaDzialka.getNumerEwidencyjny());
 		System.out.println(mojaDzialka.getNumerEwidencyjny());
 		Dzialka asiDzialka = new Dzialka("OPOLE-222356");
-		System.out.println(asiDzialka.getNumerEwidencyjny());
+		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
+		radkaDzialka = asiDzialka;
+		mojaDzialka = asiDzialka;
+		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
+		System.out.println("mojaDzialka" + mojaDzialka.getNumerEwidencyjny());
+		System.out.println("radkaDzialka" +radkaDzialka.getNumerEwidencyjny());
+		asiDzialka.setNumerEwidencyjny("DUPA-popsutyNumer");
+		System.out.println("asiDzialka" + asiDzialka.getNumerEwidencyjny());
+		System.out.println("mojaDzialka" + mojaDzialka.getNumerEwidencyjny());
+		System.out.println("radkaDzialka" +radkaDzialka.getNumerEwidencyjny());
 	}
 
 }
