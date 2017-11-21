@@ -22,32 +22,56 @@ public class Dzialka {
 	public Dzialka() {
 	}
 
-	public Dzialka(String numerEwidencyjny, String wielkoscDzialki, Osoba wlasciciel) {
+	
+	public Dzialka(String numerEwidencyjny, String wielkoscDzialki, Osoba wlasciciel, Adres adres) {
 		super();
 		this.numerEwidencyjny = numerEwidencyjny;
 		this.wielkoscDzialki = wielkoscDzialki;
 		this.wlasciciel = wlasciciel;
+		this.adres = adres;
 	}
+
 
 	public String getNumerEwidencyjny() {
 		return numerEwidencyjny;
 	}
 
-	public void setNumerEwidencyjny(String wartosc) {
-		numerEwidencyjny = wartosc;
 
+	public void setNumerEwidencyjny(String numerEwidencyjny) {
+		this.numerEwidencyjny = numerEwidencyjny;
 	}
+
 
 	public String getWielkoscDzialki() {
 		return wielkoscDzialki;
 	}
 
+
+	public void setWielkoscDzialki(String wielkoscDzialki) {
+		this.wielkoscDzialki = wielkoscDzialki;
+	}
+
+
 	public Osoba getWlasciciel() {
 		return wlasciciel;
 	}
+
 
 	public void setWlasciciel(Osoba wlasciciel) {
 		this.wlasciciel = wlasciciel;
 	}
 
+
+	public Adres getAdres() {
+		return adres;
+	}
+
+
+	public void setAdres(Adres adres) {
+		this.adres = adres;
+	}
+	public String toString() {
+		return "Numer Ewidencyjny: " + numerEwidencyjny + ", Wielkosc dzialki: " + wielkoscDzialki;
+	}
+	
 }

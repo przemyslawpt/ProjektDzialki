@@ -78,5 +78,9 @@ public class Osoba {
 	public void setPesel(String pesel) {
 		this.pesel = pesel;
 	}
-
+	
+	public String toString() {
+		return "Imie: " + imie + ", Nazwisko: " + nazwisko + ", adres: " + adres + ", Data urodzenia: "
+				+ dataUrodzenia + ", PESEL" + pesel;
+	}
 }

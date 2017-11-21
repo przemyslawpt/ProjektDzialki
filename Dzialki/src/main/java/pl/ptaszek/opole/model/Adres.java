@@ -58,7 +58,7 @@ public class Adres {
 	 * @return teksowy opis obiektu
 	 */
 	public String toString() {
-		return "Ulica: " + ulica + ", numer domu: " + numerDomu + ", kod pocztowy: " + kodPocztowy + ", miejscowosc:"
+		return "Ulica: " + ulica + ", numer domu: " + numerDomu + ", kod pocztowy: " + kodPocztowy + ", miejscowosc: "
 				+ miejscowosc;
 	}
 }
