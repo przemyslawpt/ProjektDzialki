@@ -17,6 +17,8 @@ public class Warsztaty {
 		radkaDzialka.setNumerEwidencyjny("MOG-334");
 		System.out.println(radkaDzialka.getNumerEwidencyjny());
 		System.out.println(mojaDzialka.getNumerEwidencyjny());
+		Dzialka asiDzialka = new Dzialka("OPOLE-222356");
+		System.out.println(asiDzialka.getNumerEwidencyjny());
 	}
 
 }
