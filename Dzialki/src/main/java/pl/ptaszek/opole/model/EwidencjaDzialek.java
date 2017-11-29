@@ -1,7 +1,12 @@
 package pl.ptaszek.opole.model;
+
+import java.util.List;
+import java.util.Map;
+
 /**
- * Przechowuje rejestr dzia³ek z przypisaniem do osoby
+ * Przechowuje rejestr dzialek z przypisaniem do osoby
  **/
 public class EwidencjaDzialek {
 
+private Map<Osoba, List<Dzialka>> rejestr;
 }
