@@ -9,13 +9,41 @@ import java.util.Map;
  **/
 public class EwidencjaDzialek {
 	/**
-	 * Rejestr dzia³ek
+	 * Rejestr dzialek
 	 */
 	private Map<Osoba, List<Dzialka>> rejestr;
 
 	public EwidencjaDzialek() {
 		rejestr = new HashMap<Osoba, List<Dzialka>>();
 	}
-	
-	public void dodajDzialka()
+
+	/**
+	 * @param osoba
+	 *            osoba
+	 * @param dzialka
+	 *            dzialka
+	 */
+	public void dodajDzialka(Osoba osoba, Dzialka dzialka) {
+
+	}
+
+	/**
+	 * Usuwa dzialke
+	 * 
+	 * @param osoba
+	 * @param dzialka
+	 */
+	public void usunDziala(Osoba osoba, Dzialka dzialka) {
+
+	}
+
+	/**
+	 * Wyswietla dzialki dla danej osoby
+	 * 
+	 * @param osoba
+	 * @return
+	 */
+	public List<Dzialka> podajDzialki(Osoba osoba) {
+		return null;
+	}
 }
