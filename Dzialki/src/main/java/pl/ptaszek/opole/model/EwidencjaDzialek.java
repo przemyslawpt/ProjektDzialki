@@ -1,5 +1,6 @@
 package pl.ptaszek.opole.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,11 @@ public class EwidencjaDzialek {
 	 *            dzialka
 	 */
 	public void dodajDzialka(Osoba osoba, Dzialka dzialka) {
-
+		List<Dzialka> dzialkiOsoby = rejestr.get(osoba);
+		if (dzialkiOsoby == null) {
+			rejestr.put(osoba, new ArrayList<Dzialka>());
+		}
+		rejestr.get(osoba).add(dzialka);
 	}
 
 	/**
@@ -33,8 +38,11 @@ public class EwidencjaDzialek {
 	 * @param osoba
 	 * @param dzialka
 	 */
-	public void usunDziala(Osoba osoba, Dzialka dzialka) {
-
+	public void usunDzialka(Osoba osoba, Dzialka dzialka) {
+		if (rejestr.get(osoba) == null) {
+			return;
+		}
+		rejestr.get(osoba).remove(dzialka);
 	}
 
 	/**
@@ -44,6 +52,21 @@ public class EwidencjaDzialek {
 	 * @return
 	 */
 	public List<Dzialka> podajDzialki(Osoba osoba) {
-		return null;
+		return rejestr.get(osoba);
 	}
+
+	public void wyswietlDzialki(Osoba osoba) {
+		System.out.println("------------");
+		System.out.println(osoba);
+		List<Dzialka> dzialkiOsoby = rejestr.get(osoba);
+		if (dzialkiOsoby == null) {
+			return;
+		}
+		System.out.println("------------");
+		for (Dzialka dzialka : dzialkiOsoby) {
+			System.out.println(dzialka);
+		}
+		System.out.println("------------");
+	}
+
 }

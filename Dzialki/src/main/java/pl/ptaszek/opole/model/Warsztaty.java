@@ -15,19 +15,25 @@ public class Warsztaty {
 		String numerDomu = "28";
 		String kodPocztowy = "05-640";
 		String miejscowosc = "Mogielnica";
-		
 		Adres miechowice = new Adres(ulica, numerDomu, kodPocztowy, miejscowosc);
-		System.out.println(miechowice);
-		
-		Osoba radek= new Osoba("Radek", "Ptaszek", miechowice, "13.01.1888", "8953121251412");
-		System.out.println(radek);
-		
-		Dzialka sad = new Dzialka ("MOG-334", "324 metry kwadratowe", radek, miechowice);
-		System.out.println(sad);
-		/**
-		 * Jak uruchomic program (jakich komend uzyc?) aby kazda kolejna dana byla pod sob� a nie w jednej lini??
-		 * jak zrobic wprowadzanie danych? scanner in?
-		 */
-		
+		Adres wieden = new Adres("byleco", "shunbrunerStrasse 23/3", "129028", "wieden");
+		Osoba radek = new Osoba("Radek", "Ptaszek", miechowice, "13.01.1888", "8953121251412");
+		Osoba przemek = new Osoba("Przemek", "Ptaszek", wieden, "10.10.1010", "10101010101001");
+		Dzialka sad = new Dzialka("MOG-334", "324 metry kwadratowe", radek, miechowice);
+		Dzialka pole = new Dzialka("MOG-335", "1 metr kwadratowy", przemek, wieden);
+		Dzialka ropa = new Dzialka("MOG-100", "100 metr kwadratowy", radek, miechowice);
+		Dzialka kicha = new Dzialka("MOG-5", "10 metr kwadratowy", przemek, wieden);
+		Dzialka blok = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		EwidencjaDzialek ewidencja = new EwidencjaDzialek();
+		ewidencja.usunDzialka(radek, sad);
+		ewidencja.wyswietlDzialki(radek);
+		ewidencja.dodajDzialka(radek, sad);
+		ewidencja.wyswietlDzialki(radek);
+		ewidencja.usunDzialka(radek, sad);
+		ewidencja.wyswietlDzialki(radek);
+		ewidencja.dodajDzialka(radek,ropa);
+		ewidencja.dodajDzialka(radek,blok);
+		ewidencja.dodajDzialka(radek,blok);
+		ewidencja.wyswietlDzialki(radek);
 	}
 }
