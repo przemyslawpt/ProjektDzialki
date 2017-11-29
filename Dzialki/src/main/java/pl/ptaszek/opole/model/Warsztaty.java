@@ -11,7 +11,7 @@ public class Warsztaty {
 	 * @param argc
 	 */
 	public static void main(String[] argc) {
-		String ulica = "Miechowice";
+		String ulica = "Miechowice\n";
 		String numerDomu = "28";
 		String kodPocztowy = "05-640";
 		String miejscowosc = "Mogielnica";
@@ -22,10 +22,10 @@ public class Warsztaty {
 		Osoba radek= new Osoba("Radek", "Ptaszek", miechowice, "13.01.1888", "8953121251412");
 		System.out.println(radek);
 		
-		Dzialka sad = new Dzialka ("MOG-334", "324 metry kwadratowe", radek, miechowice);
+		Dzialka sad = new Dzialka ("MOG-334\n", "324 metry kwadratowe\n", radek, miechowice);
 		System.out.println(sad);
 		/**
-		 * Jak uruchomic program (jakich komend uzyc?) aby kazda kolejna dana byla pod sobá a nie w jednej lini??
+		 * Jak uruchomic program (jakich komend uzyc?) aby kazda kolejna dana byla pod sobï¿½ a nie w jednej lini??
 		 * jak zrobic wprowadzanie danych? scanner in?
 		 */
 		
