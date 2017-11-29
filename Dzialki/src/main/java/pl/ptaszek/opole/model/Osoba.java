@@ -80,7 +80,7 @@ public class Osoba {
 	}
 	
 	public String toString() {
-		return "Imie: " + imie + ", Nazwisko: " + nazwisko + ", adres: " + adres + ", Data urodzenia: "
-				+ dataUrodzenia + ", PESEL" + pesel;
+		return "Imie: " + imie + "\nNazwisko: " + nazwisko + "\nadres: " + adres + "\nData urodzenia: "
+				+ dataUrodzenia + "\nPESEL" + pesel;
 	}
 }
