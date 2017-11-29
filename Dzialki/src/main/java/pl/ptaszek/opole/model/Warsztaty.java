@@ -29,7 +29,5 @@ public class Warsztaty {
 		 * jak zrobic wprowadzanie danych? scanner in?
 		 */
 		
-		
-		
 	}
 }
