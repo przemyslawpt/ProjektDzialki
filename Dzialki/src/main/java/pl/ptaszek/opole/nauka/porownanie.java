@@ -1,9 +1,9 @@
 package pl.ptaszek.opole.nauka;
 import java.util.Scanner;
 
-public class porównanie {
+public class porownanie {
 	public static void main(String[] args) {
-		Scanner odczyt= new Scanner(System.in);
+		Scanner odczyt = new Scanner(System.in);
 		System.out.println("Podaj pierwsz¹ liczbê");
 		int a= odczyt.nextInt();
 		System.out.println("Podaj drug¹ liczbê");
