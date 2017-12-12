@@ -1,9 +1,9 @@
 package pl.ptaszek.opole.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Przechowuje rejestr dzialek z przypisaniem do osoby
@@ -12,10 +12,10 @@ public class EwidencjaDzialek {
 	/**
 	 * Rejestr dzialek
 	 */
-	private Map<Osoba, List<Dzialka>> rejestr;
+	private Map<Osoba, Set<Dzialka>> rejestr;
 
 	public EwidencjaDzialek() {
-		rejestr = new HashMap<Osoba, List<Dzialka>>();
+		rejestr = new HashMap<Osoba, Set<Dzialka>>();
 	}
 
 	/**
@@ -25,9 +25,9 @@ public class EwidencjaDzialek {
 	 *            dzialka
 	 */
 	public void dodajDzialka(Osoba osoba, Dzialka dzialka) {
-		List<Dzialka> dzialkiOsoby = rejestr.get(osoba);
+		Set<Dzialka> dzialkiOsoby = rejestr.get(osoba);
 		if (dzialkiOsoby == null) {
-			rejestr.put(osoba, new ArrayList<Dzialka>());
+			rejestr.put(osoba, new HashSet<Dzialka>());
 		}
 		rejestr.get(osoba).add(dzialka);
 	}
@@ -51,14 +51,14 @@ public class EwidencjaDzialek {
 	 * @param osoba
 	 * @return
 	 */
-	public List<Dzialka> podajDzialki(Osoba osoba) {
+	public Set<Dzialka> podajDzialki(Osoba osoba) {
 		return rejestr.get(osoba);
 	}
 
 	public void wyswietlDzialki(Osoba osoba) {
 		System.out.println("------------");
 		System.out.println(osoba);
-		List<Dzialka> dzialkiOsoby = rejestr.get(osoba);
+		Set<Dzialka> dzialkiOsoby = rejestr.get(osoba);
 		if (dzialkiOsoby == null) {
 			return;
 		}
@@ -69,4 +69,16 @@ public class EwidencjaDzialek {
 		System.out.println("------------");
 	}
 
+	/**
+	 * 
+	 * @return ilosc dzialek dla osoby
+	 */
+	public int podajlIloscDzialek(Osoba osoba) {
+		Set<Dzialka> dzialkiOsoby = rejestr.get(osoba);
+		if (dzialkiOsoby == null) {
+			return -1;
+		}
+		return dzialkiOsoby.size();
+
+	}
 }

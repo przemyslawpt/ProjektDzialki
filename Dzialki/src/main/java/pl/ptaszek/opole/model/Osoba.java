@@ -83,4 +83,47 @@ public class Osoba {
 		return "Imie: " + imie + "\nNazwisko: " + nazwisko + "\nadres: " + adres + "\nData urodzenia: "
 				+ dataUrodzenia + "\nPESEL" + pesel;
 	}
+
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Osoba other = (Osoba) obj;
+		if (adres == null) {
+			if (other.adres != null)
+				return false;
+		} else if (!adres.equals(other.adres))
+			return false;
+		if (dataUrodzenia == null) {
+			if (other.dataUrodzenia != null)
+				return false;
+		} else if (!dataUrodzenia.equals(other.dataUrodzenia))
+			return false;
+		if (imie == null) {
+			if (other.imie != null)
+				return false;
+		} else if (!imie.equals(other.imie))
+			return false;
+		if (nazwisko == null) {
+			if (other.nazwisko != null)
+				return false;
+		} else if (!nazwisko.equals(other.nazwisko))
+			return false;
+		if (pesel == null) {
+			if (other.pesel != null)
+				return false;
+		} else if (!pesel.equals(other.pesel))
+			return false;
+		return true;
+	}
+	
 }

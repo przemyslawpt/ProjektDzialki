@@ -24,16 +24,29 @@ public class Warsztaty {
 		Dzialka ropa = new Dzialka("MOG-100", "100 metr kwadratowy", radek, miechowice);
 		Dzialka kicha = new Dzialka("MOG-5", "10 metr kwadratowy", przemek, wieden);
 		Dzialka blok = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		System.out.println("typ dzialki:" + blok.getTyp());
+		Dzialka blok2 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		Dzialka blok3 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
+		System.out.println("typ dzialki:" + blok3.getTyp());
+		Object blok4 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
+		System.out.println("typ dzialki:" + ((Dzialka) blok4).getTyp());
+		Dzialka blok5 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		Dzialka blok6 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		Dzialka blok7 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
+		Dzialka blok8 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
 		EwidencjaDzialek ewidencja = new EwidencjaDzialek();
-		ewidencja.usunDzialka(radek, sad);
-		ewidencja.wyswietlDzialki(radek);
+
 		ewidencja.dodajDzialka(radek, sad);
+		ewidencja.dodajDzialka(radek, ropa);
+		ewidencja.dodajDzialka(radek, blok);
+		ewidencja.dodajDzialka(radek, blok2);
+		ewidencja.dodajDzialka(radek, blok5);
+		ewidencja.dodajDzialka(radek, blok6);
+		ewidencja.dodajDzialka(radek, blok7);
+		ewidencja.dodajDzialka(radek, blok8);
 		ewidencja.wyswietlDzialki(radek);
-		ewidencja.usunDzialka(radek, sad);
-		ewidencja.wyswietlDzialki(radek);
-		ewidencja.dodajDzialka(radek,ropa);
-		ewidencja.dodajDzialka(radek,blok);
-		ewidencja.dodajDzialka(radek,blok);
-		ewidencja.wyswietlDzialki(radek);
+		ewidencja.podajlIloscDzialek(radek);
+		System.out.println("ilosc dzialek:" + ewidencja.podajlIloscDzialek(radek));
+
 	}
 }
