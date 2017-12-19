@@ -9,6 +9,16 @@ public class Adres {
 	private String kodPocztowy;
 
 	private String miejscowosc;
+	
+	private String numberLokalu;
+
+	public String getNumberLokalu() {
+		return numberLokalu;
+	}
+
+	public void setNumberLokalu(String numberLokalu) {
+		this.numberLokalu = numberLokalu;
+	}
 
 	public Adres() {
 	}

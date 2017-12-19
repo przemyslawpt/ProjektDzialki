@@ -1,6 +1,5 @@
 package pl.ptaszek.opole.model;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -14,8 +13,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "dzialka")
-public class Dzialka {
-
+public class DzialkaZabudowana {
+	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	/**
@@ -30,28 +29,17 @@ public class Dzialka {
 	private Osoba wlasciciel;
 
 	private Adres adres;
-
-	private ObrebGeodezyjny obrebGeodezyjny;
-
+	
+	private ObrebGeodezyjny obredGeodezyjny;
+	
 	private String numberKsiegiWieczystej;
-
-	/**
-	 * Przeznaczenie dzialki jest opisem.
-	 */
-	private String przeznaczenieDzialki;
-
+	
 	List<String> dokumentyPowiazaneLista;
 
-	List<Wycena> wycenaList;
-
-	private String trzyletnieWykorzystanieOpis;
-	
-	private String obciazeniaOgraniczonymiPrawamiRzeczowymi;
-
-	public Dzialka() {
+	public DzialkaZabudowana() {
 	}
 
-	public Dzialka(String numerEwidencyjny, String wielkoscDzialki, Osoba wlasciciel, Adres adres) {
+	public DzialkaZabudowana(String numerEwidencyjny, String wielkoscDzialki, Osoba wlasciciel, Adres adres) {
 		super();
 		this.numerEwidencyjny = numerEwidencyjny;
 		this.wielkoscDzialki = wielkoscDzialki;
@@ -70,11 +58,11 @@ public class Dzialka {
 	public String getWielkoscDzialki() {
 		return wielkoscDzialki;
 	}
-
+	
 	public String getNumberKsiegiWieczystej() {
 		return numberKsiegiWieczystej;
 	}
-
+	
 	public void setNumberKsiegiWieczystej(String numberKsiegiWieczystej) {
 		this.numberKsiegiWieczystej = numberKsiegiWieczystej;
 	}
@@ -120,7 +108,7 @@ public class Dzialka {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Dzialka other = (Dzialka) obj;
+		DzialkaZabudowana other = (DzialkaZabudowana) obj;
 		if (adres == null) {
 			if (other.adres != null)
 				return false;
@@ -143,5 +131,5 @@ public class Dzialka {
 			return false;
 		return true;
 	}
-
+ 	
 }
