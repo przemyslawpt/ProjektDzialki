@@ -1,11 +1,22 @@
 package pl.ptaszek.opole.model;
 
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
 /**
  * Opisuje dzialke.
  *
  */
+@Entity
+@Table(name = "dzialka")
 public class Dzialka {
-
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	/**
 	 * Numer ewidencyjny dzialki. Polski standard UFE-223.
 	 */
@@ -18,6 +29,12 @@ public class Dzialka {
 	private Osoba wlasciciel;
 
 	private Adres adres;
+	
+	private ObrebGeodezyjny obredGeodezyjny;
+	
+	private String numberKsiegiWieczystej;
+	
+	List<String> dokumentyPowiazaneLista;
 
 	public Dzialka() {
 	}
@@ -40,6 +57,14 @@ public class Dzialka {
 
 	public String getWielkoscDzialki() {
 		return wielkoscDzialki;
+	}
+	
+	public String getNumberKsiegiWieczystej() {
+		return numberKsiegiWieczystej;
+	}
+	
+	public void setNumberKsiegiWieczystej(String numberKsiegiWieczystej) {
+		this.numberKsiegiWieczystej = numberKsiegiWieczystej;
 	}
 
 	public void setWielkoscDzialki(String wielkoscDzialki) {
