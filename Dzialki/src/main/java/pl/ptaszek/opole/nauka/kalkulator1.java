@@ -9,12 +9,8 @@ public class kalkulator1 {
 	 double y= a-b/c;
 	 System.out.println(x= (a+b)*c);
 	 System.out.println(y= a-b/c);
-	 System.out.println(x=((a++)+(b++))*(c++));//dlaczego tu wynik jest taki sam jak dwie linie wy¿ej?
+	 System.out.println(x=((a++)+(b++))*(c++));//dlaczego tu wynik jest taki sam jak dwie linie wyï¿½ej?
 	 System.out.println(y=(a++)-(b++)/(c++));// dlaczego tu nie ma minusa przed wynikiem?
-	 boolean porównanie1= (a+b)>c;
-	 boolean porównanie2= a==b;
-	 System.out.println(porównanie1);
-	 System.out.println(porównanie2);
 	 
 	
 	 

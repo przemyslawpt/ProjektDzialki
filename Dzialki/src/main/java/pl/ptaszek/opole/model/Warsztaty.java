@@ -26,10 +26,10 @@ public class Warsztaty {
 		Dzialka blok = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
 		System.out.println("typ dzialki:" + blok.getTyp());
 		Dzialka blok2 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
-		Dzialka blok3 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
-		System.out.println("typ dzialki:" + blok3.getTyp());
-		Object blok4 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
-		System.out.println("typ dzialki:" + ((Dzialka) blok4).getTyp());
+		//Dzialka blok3 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
+		//System.out.println("typ dzialki:" + blok3.getTyp());
+		//Object blok4 = new DzialkaUzbrojona("MOG-3", "10000000 metr kwadratowy", radek, miechowice, "woda");
+		//System.out.println("typ dzialki:" + ((Dzialka) blok4).getTyp());
 		Dzialka blok5 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
 		Dzialka blok6 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
 		Dzialka blok7 = new Dzialka("MOG-3", "10000000 metr kwadratowy", radek, miechowice);
