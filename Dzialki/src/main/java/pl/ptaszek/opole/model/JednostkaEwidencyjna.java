@@ -34,4 +34,11 @@ public class JednostkaEwidencyjna {
 		this.obszarGeodezyjnyList = obszarGeodezyjnyList;
 	}
 
+	public JednostkaEwidencyjna(String nazwa, String number, List<ObrebGeodezyjny> obszarGeodezyjnyList) {
+		super();
+		this.nazwa = nazwa;
+		this.number = number;
+		this.obszarGeodezyjnyList = obszarGeodezyjnyList;
+	}
+
 }

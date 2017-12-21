@@ -1,5 +1,9 @@
 package pl.ptaszek.opole.model;
-
+/**
+ * Nie wiem co mam tu zrobic.
+ * @author Radek
+ *
+ */
 public enum TypObciazenia {
 
 	SLUZEBNOSC_PRZESYLU, 
