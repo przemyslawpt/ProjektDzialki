@@ -1,7 +1,21 @@
 package pl.ptaszek.opole.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "adres")
 public class Adres {
 
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
 	private String ulica;
 
 	private String numerDomu;
@@ -52,6 +66,14 @@ public class Adres {
 
 	public void setKodPocztowy(String kodPocztowy) {
 		this.kodPocztowy = kodPocztowy;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getMiejscowosc() {
