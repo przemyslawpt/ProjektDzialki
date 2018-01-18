@@ -15,7 +15,7 @@ public class Adres {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	private String ulica;
 
 	private String numerDomu;
@@ -23,8 +23,21 @@ public class Adres {
 	private String kodPocztowy;
 
 	private String miejscowosc;
-	
+
 	private String numerLokalu;
+
+	public Adres() {
+	}
+
+	public Adres(int id, String ulica, String numerDomu, String kodPocztowy, String miejscowosc, String numerLokalu) {
+		super();
+		this.id = id;
+		this.ulica = ulica;
+		this.numerDomu = numerDomu;
+		this.kodPocztowy = kodPocztowy;
+		this.miejscowosc = miejscowosc;
+		this.numerLokalu = numerLokalu;
+	}
 
 	public String getNumberLokalu() {
 		return numerLokalu;
@@ -32,16 +45,6 @@ public class Adres {
 
 	public void setNumberLokalu(String numberLokalu) {
 		this.numerLokalu = numberLokalu;
-	}
-
-	public Adres() {
-	}
-
-	public Adres(String ulica, String numerDomu, String kodPocztowy, String miejscowosc) {
-		this.ulica = ulica;
-		this.numerDomu = numerDomu;
-		this.kodPocztowy = kodPocztowy;
-		this.miejscowosc = miejscowosc;
 	}
 
 	public String getUlica() {
@@ -130,5 +133,5 @@ public class Adres {
 			return false;
 		return true;
 	}
-	
+
 }
