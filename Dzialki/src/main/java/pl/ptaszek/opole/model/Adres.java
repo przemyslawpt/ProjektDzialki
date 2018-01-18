@@ -24,14 +24,14 @@ public class Adres {
 
 	private String miejscowosc;
 	
-	private String numberLokalu;
+	private String numerLokalu;
 
 	public String getNumberLokalu() {
-		return numberLokalu;
+		return numerLokalu;
 	}
 
 	public void setNumberLokalu(String numberLokalu) {
-		this.numberLokalu = numberLokalu;
+		this.numerLokalu = numberLokalu;
 	}
 
 	public Adres() {
