@@ -17,8 +17,8 @@ public class Warsztaty {
 		String miejscowosc = "Mogielnica";
 		Adres miechowice = new Adres(ulica, numerDomu, kodPocztowy, miejscowosc);
 		Adres wieden = new Adres("byleco", "shunbrunerStrasse 23/3", "129028", "wieden");
-		Osoba radek = new Osoba("Radek", "Ptaszek", miechowice, "13.01.1888", "8953121251412");
-		Osoba przemek = new Osoba("Przemek", "Ptaszek", wieden, "10.10.1010", "10101010101001");
+		Osoba radek = new Osoba("Radek", "Ptaszek",  "13.01.1888", "8953121251412");
+		Osoba przemek = new Osoba("Przemek", "Ptaszek", "10.10.1010", "10101010101001");
 		Dzialka sad = new Dzialka("MOG-334", "324 metry kwadratowe", radek, miechowice);
 		Dzialka pole = new Dzialka("MOG-335", "1 metr kwadratowy", przemek, wieden);
 		Dzialka ropa = new Dzialka("MOG-100", "100 metr kwadratowy", radek, miechowice);
