@@ -29,9 +29,8 @@ public class Adres {
 	public Adres() {
 	}
 
-	public Adres(int id, String ulica, String numerDomu, String kodPocztowy, String miejscowosc, String numerLokalu) {
+	public Adres(String ulica, String numerDomu, String kodPocztowy, String miejscowosc, String numerLokalu) {
 		super();
-		this.id = id;
 		this.ulica = ulica;
 		this.numerDomu = numerDomu;
 		this.kodPocztowy = kodPocztowy;
